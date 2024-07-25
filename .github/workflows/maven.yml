@@ -40,15 +40,15 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
-          image: shrutipalekar/demo-repository
-          registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          #image: shrutipalekar/demo-repository
+          #registry: docker.io
+          #username: ${{ secrets.DOCKERHUB_USERNAME }}
+          #password: ${{ secrets.DOCKERHUB_TOKEN }}
           push: true    
 
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Publish artifacts
-        run: echo "Publishing artifacts"
+  #publish:
+    #needs: build
+    #runs-on: ubuntu-latest
+    #steps:
+      #- name: Publish artifacts
+        #run: echo "Publishing artifacts"
