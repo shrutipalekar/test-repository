@@ -15,7 +15,7 @@ on:
     branches: [ "masterTemp" ]
 
 jobs:
-  build:
+  build-java:
     runs-on: ubuntu-latest
     #runs-on: ${{ matrix.os }}
     #strategy:
@@ -30,14 +30,16 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+          
       - name: Build with Maven
         run: mvn -B package --file TempMaven/pom.xml
+        
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
           image: shrutipalekar/demo-repository
           registry: docker.io
-          tag: demo-image
+          #tag: demo-image
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           #dockerfile: Dockerfile
