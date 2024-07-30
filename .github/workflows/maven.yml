@@ -35,7 +35,7 @@ jobs:
         run: mvn -B package --file TempMaven/pom.xml
         
       - name: Build and Push Docker Image
-        uses: mr-smithers-excellent/docker-build-push@v4
+        uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: shrutipalekar/demo-repository
           registry: docker.io
