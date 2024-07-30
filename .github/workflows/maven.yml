@@ -17,8 +17,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./dockertemp
+    #env:
+      #working-directory: ./dockertemp
     #runs-on: ${{ matrix.os }}
     #strategy:
       #matrix:
@@ -42,8 +42,8 @@ jobs:
           #tag: demo-image
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          directory: ${{ env.working-directory}}
-          dockerfile: dockertemp/Dockerfile
+          #directory: ${{ env.working-directory}}
+          dockerfile: Dockerfile
 
   #publish:
     #needs: build
