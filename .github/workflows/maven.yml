@@ -42,7 +42,7 @@ jobs:
           #tag: demo-image
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          working-directory: ${{ env.working-directory}}
+          directory: ${{ env.working-directory}}
           dockerfile: dockertemp/Dockerfile
 
   #publish:
