@@ -35,9 +35,9 @@ jobs:
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          image: Demo Image
-          registry: shrutipalekar/demo-repository
-          tags: demo-image
+          image: shrutipalekar/demo-repository
+          registry: docker.io
+          tag: demo-image
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           #dockerfile: Dockerfile
